@@ -1,5 +1,7 @@
 def prepare_boards(lengths, needed):
-    sorted_lengths=sorted(lengths)
-    selected_lengths=sorted_lengths
-    total_selected_length=sum(selected_lengths)
-    return (lengths, sorted_lengths, selected_lengths, total_selected_length)
+    new_list=sorted(lengths)
+    return(new_list,new_list[:needed])
+lengths=[60,20,50,20,35]
+needed=3
+items=prepare_boards(lengths,needed)
+sorted_list,selected=items
